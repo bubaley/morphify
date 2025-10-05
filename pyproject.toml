@@ -5,7 +5,7 @@ requires = [ "hatchling" ]
 
 [project]
 name = "morphium"
-version = "0.0.1"
+version = "0.1.0"
 description = "Lightweight templating and value formatting utilities"
 readme = "README.md"
 keywords = [
