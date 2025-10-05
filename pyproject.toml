@@ -40,8 +40,8 @@ urls.Repository = "https://github.com/bubaley/morphify.git"
 
 [dependency-groups]
 dev = [
-    "coverage>=7.9.1",
-    "pre-commit>=4.2.0",
+    "coverage>=7.10.7",
+    "pre-commit>=4.3.0",
     "pytest>=8.4.2",
     "ruff>=0.13.3",
 ]
