@@ -1,0 +1,86 @@
+[build-system]
+build-backend = "hatchling.build"
+
+requires = [ "hatchling" ]
+
+[project]
+name = "morphium"
+version = "0.0.1"
+description = "Lightweight templating and value formatting utilities"
+readme = "README.md"
+keywords = [
+    "data-transformation",
+    "date-formatting",
+    "dynamic-rendering",
+    "expression-evaluation",
+    "string-formatting",
+    "template",
+    "templating",
+    "text-processing",
+]
+
+license = { text = "MIT" }
+maintainers = [ { name = "bubaley", email = "bubaley.fu@gmail.com" } ]
+authors = [ { name = "bubaley", email = "bubaley.fu@gmail.com" } ]
+
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [  ]
+
+urls.Documentation = "https://github.com/bubaley/morphium#readme"
+urls.Homepage = "https://github.com/bubaley/morphium"
+urls.Repository = "https://github.com/bubaley/morphium.git"
+
+[dependency-groups]
+dev = [
+    "coverage>=7.9.1",
+    "pre-commit>=4.2.0",
+    "pytest>=8.4.2",
+    "ruff>=0.13.3",
+]
+
+[tool.ruff]
+target-version = "py313"
+line-length = 120
+indent-width = 4
+fix = true
+format.quote-style = "single"
+format.line-ending = "auto"
+format.skip-magic-trailing-comma = false
+lint.extend-select = [ "I" ]
+lint.extend-per-file-ignores."core/settings/*.py" = [ "F403", "F405" ]
+lint.dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = [ "tests" ]
+pythonpath = [ "." ]
+
+[tool.coverage.run]
+branch = true
+source = [ "morphium" ]
+omit = [
+    "tests/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true
+fail_under = 90
+
+[tool.coverage.paths]
+source = [
+    "morphium",
+    ".*/site-packages/morphium",
+]
+
+[tool.bandit]
+skips = [ "B101" ]
+exclude_dirs = [ "tests" ]
