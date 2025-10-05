@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 requires = [ "hatchling" ]
 
 [project]
-name = "morphium"
+name = "morphify"
 version = "0.0.1"
 description = "Lightweight templating and value formatting utilities"
 readme = "README.md"
@@ -34,9 +34,9 @@ classifiers = [
 ]
 dependencies = [  ]
 
-urls.Documentation = "https://github.com/bubaley/morphium#readme"
-urls.Homepage = "https://github.com/bubaley/morphium"
-urls.Repository = "https://github.com/bubaley/morphium.git"
+urls.Documentation = "https://github.com/bubaley/morphify#readme"
+urls.Homepage = "https://github.com/bubaley/morphify"
+urls.Repository = "https://github.com/bubaley/morphify.git"
 
 [dependency-groups]
 dev = [
@@ -65,7 +65,7 @@ pythonpath = [ "." ]
 
 [tool.coverage.run]
 branch = true
-source = [ "morphium" ]
+source = [ "morphify" ]
 omit = [
     "tests/*",
 ]
@@ -77,8 +77,8 @@ fail_under = 90
 
 [tool.coverage.paths]
 source = [
-    "morphium",
-    ".*/site-packages/morphium",
+    "morphify",
+    ".*/site-packages/morphify",
 ]
 
 [tool.bandit]

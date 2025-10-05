@@ -2,7 +2,7 @@ from datetime import datetime
 
 import pytest
 
-from morphium import ValueMorpher
+from morphify import ValueMorpher
 
 
 def test_decimal_basic_rounding():

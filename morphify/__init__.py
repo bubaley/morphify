@@ -1,4 +1,4 @@
-"""Morphium public API."""
+"""Morphify public API."""
 
 from .template_morpher import TemplateMorpher, TemplateMorpherConfig
 from .value_morpher import ValueMorpher

@@ -2,7 +2,7 @@ from datetime import datetime
 
 import pytest
 
-from morphium import TemplateMorpher, ValueMorpher
+from morphify import TemplateMorpher, ValueMorpher
 
 
 def test_numeric_literal_passthrough():

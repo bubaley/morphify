@@ -1,4 +1,4 @@
-Morphium
+Morphify
 ========
 
 Lightweight string templating with safe variable resolution and value formatting.
@@ -14,14 +14,14 @@ Installation
 ------------
 
 ```bash
-pip install morphium
+pip install morphify
 ```
 
 Quick start
 -----------
 
 ```python
-from morphium import TemplateMorpher
+from morphify import TemplateMorpher
 
 tpl = "Hello, {{ if($name, $name, 'guest') }}! Today is {{ format($date, 'DD.MM.YYYY') }}."
 print(TemplateMorpher(tpl, {"name": "Alex", "date": "2025-10-05"}).render())
@@ -32,7 +32,7 @@ API
 ---
 
 ```python
-from morphium import TemplateMorpher, ValueMorpher
+from morphify import TemplateMorpher, ValueMorpher
 ```
 
 - TemplateMorpher(template: str, context: dict, config: TemplateConfig | None = None).render() -> str
@@ -54,8 +54,8 @@ Configuration
 -------------
 
 ```python
-from morphium import TemplateMorpher
-from morphium.morphium.template_morpher import TemplateConfig
+from morphify import TemplateMorpher
+from morphify.morphify.template_morpher import TemplateConfig
 
 tpl = 'Today: {{$date}}'  # no explicit format()
 cfg = TemplateConfig(default_date_format='DD/MM/YY')
@@ -67,7 +67,7 @@ Formatting examples
 -------------------
 
 ```python
-from morphium import ValueMorpher
+from morphify import ValueMorpher
 
 ValueMorpher('0.000', '3.14159').render()  # '3.142'
 ValueMorpher('DD/MM/YY HH:mm', 1728096000).render()  # timestamp -> '05/10/25 00:00'

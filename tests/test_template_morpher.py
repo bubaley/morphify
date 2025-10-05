@@ -1,6 +1,6 @@
 from datetime import date
 
-from morphium import TemplateMorpher, TemplateMorpherConfig
+from morphify import TemplateMorpher, TemplateMorpherConfig
 
 
 def test_if_branching_and_vars():
